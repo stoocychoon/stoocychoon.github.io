@@ -1,0 +1,303 @@
+/* general reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body and font Settings */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f9f7f1;
+    color: #2f2f2f;
+}
+
+/* header navigation */
+header {
+    background-color: #ece2c6;
+    border-bottom: 2px solid #2f2f2f;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header nav ul {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2f2f2f;
+    padding: 10px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* hero section */
+.hero {
+    background-image: url('/Users/stacy/Desktop/CMU 24-25/moibleweb/assignment_3_folder/617cc4248332f32d19d88f9db1602872.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 2px solid #2f2f2f;
+    width: 100%;
+    margin: 60px 0 20px 0;
+    color: white;
+    min-height: 50rem;
+}
+
+/* style text within the hero section */
+.hero h1 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14rem;
+    font-weight: bold;
+    color: inherit;
+}
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    color: inherit;
+}
+
+/* flexbox container for the rest of the page */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* flexbox layout for boxes */
+.box {
+    font-family: "Oswald", sans-serif;
+    background-color: #f9f7f1;
+    border: 1px solid #2f2f2f;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    flex: 1 1 calc(33.33% - 40px);
+    margin: 10px;
+}
+
+/* adjusting the content inside the new release box */
+.box1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.box1 .box-image, .box5 .box-image {
+    max-width: 13rem;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #2f2f2f;
+    transition: transform 0.2s ease;
+}
+.box-image:hover, .box5 .box-image:hover{
+    transform: scale(1.1);
+}
+.box1 p {
+    font-size: 1.2rem;
+    color: #2f2f2f;
+    font-family: 'Georgia', serif;
+}
+
+.box2 {
+    flex: 2 1 calc(66.66% - 40px);
+}
+.albums {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.album-image {
+    max-width: 13rem;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #2f2f2f;
+    transition: transform 0.2s ease;
+}
+
+.album-image:hover {
+    transform: scale(1.1);
+}
+.box3 { 
+    flex: 1 1 calc(100% - 40px);
+}
+
+.box5 {
+    flex: 1 1 calc(33.33% - 40px);
+    text-align: center;
+    padding: 20px;
+}
+
+.upcoming-shows {
+    padding-top: 10px;
+}
+
+.show-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.dotted-line {
+    flex-grow: 1;
+    border-bottom: 1px dotted #2f2f2f;
+    margin: 0 10px;
+}
+
+.show-name {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+}
+
+.show-price {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+}
+.box4 {
+    background-image: url('/Users/stacy/Desktop/CMU 24-25/moibleweb/assignment_3_folder/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+.box4:hover {
+    color: black;
+}
+
+/* social section */
+.social-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.social-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.social-links {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* responsive design */
+@media (min-width: 300px) {
+    .albums {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .hero-image {
+        max-width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 600px) {
+    .box {
+        flex: 1 1 calc(50% - 40px);
+    }
+    .box2 {
+        flex: 2 1 calc(100% - 40px);
+    }
+    .albums {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .hero-image {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .album-image {
+        max-width: 13rem; 
+        margin: 10px 0; 
+    }
+    .box3 { 
+        flex: 1 1 calc(100% - 40px); 
+    }
+}
+
+/* for desktops */
+@media (min-width: 900px) {
+    .box {
+        flex: 1 1 calc(33.33% - 40px);
+    }
+    .box2 {
+        flex: 2 1 calc(66.66% - 40px);
+    }
+    .albums {
+        flex-direction: row; 
+    }
+    .box3 { 
+        flex: 1 1 calc(100% - 40px); 
+    }
+}
+
+/* footer */
+footer {
+    background-color: #ece2c6;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #2f2f2f;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative;
+}
